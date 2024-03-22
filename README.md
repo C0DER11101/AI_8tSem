@@ -6,6 +6,10 @@ If the project turns out to be somewhat enjoyable then I will think of an altern
 
 **Warning:** _Do not share this repository at any cost._
 
+Bhai, ye playlist dekh le, jo jo sir padhaya hai, vo vo yaha se dekh ke padh le:
+
+[Playlist](https://youtube.com/playlist?list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI&si=JiNx7sfbSnE3d_Wo).
+
 <p align = "center">
 &#9678; &#9678; &#9678;
 </p>
