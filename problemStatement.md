@@ -23,7 +23,14 @@
 * Time complexity: $O(b^m)$, where $b$ is the **branching factor** and $m$ is the **maximum depth**.
 * Space complexity: $O(b^m)$.
 
-## <ins>Evaluation function in minimax algorithm</ins>
+## <ins>Evaluation function or Heuristic function in minimax algorithm</ins>
+This function calculates the value of the board depending on the placement of pieces on the board.
+
+We are using this function for the tic-tac-toe game.
+
+**Basic idea:** To give a high value for a board in the maximizer's turn or a low value in the minimizer's turn.
+
+* _Source:_ [https://www.geeksforgeeks.org/introduction-to-evaluation-function-of-minimax-algorithm-in-game-theory/](https://www.geeksforgeeks.org/introduction-to-evaluation-function-of-minimax-algorithm-in-game-theory/).
 
 <p align = "center">
 &#9678; &#9678; &#9678;
