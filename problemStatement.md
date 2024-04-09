@@ -11,6 +11,7 @@
 * [Minimax Algorithm-3](https://youtu.be/S7L4-KDTvEE?si=73Woy2PdFmmaIjQv).
 * [Minimax Algorithm-4](https://youtu.be/SLgZhpDsrfc?si=x53k2E5Ww_4DQT8L).
 * [Minimax Algorithm-5](https://youtu.be/trKjYdBASyQ?si=3-VLvu-lEyqjVu5V).
+* [Minimax Algorithm-6](https://youtu.be/xXCszgfPN6Y?si=6CEXx1K94cR3dwHM).
 
 ## <ins>Games</ins>
 * Chess.
