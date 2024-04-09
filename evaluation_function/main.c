@@ -1,4 +1,4 @@
-// Implementing an evaluation function
+// Implementing an evaluation function/heuristic function.
 
 #include<stdio.h>
 #include<stdbool.h>
