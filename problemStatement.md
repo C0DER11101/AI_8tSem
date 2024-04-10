@@ -32,6 +32,7 @@ We are using this function for the tic-tac-toe game.
 **Basic idea:** To give a high value for a board in the maximizer's turn or a low value in the minimizer's turn.
 
 * _Source:_ [https://www.geeksforgeeks.org/introduction-to-evaluation-function-of-minimax-algorithm-in-game-theory/](https://www.geeksforgeeks.org/introduction-to-evaluation-function-of-minimax-algorithm-in-game-theory/).
+*_Source:_ [https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/).
 
 <p align = "center">
 &#9678; &#9678; &#9678;
