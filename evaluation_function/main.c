@@ -5,7 +5,8 @@
 #include<stdlib.h>
 #include<time.h>
 #include<math.h>
-#include<Co.h>
+//#include<Co.h>
+#include<conio.h> // comment this line out when executing this program in ubuntu
 
 int evaluate(int[3][3]);
 int place_xo(int[3][3], int);
@@ -46,6 +47,7 @@ int main(void) {
 }
 
 int evaluate(int board[3][3]) {
+	// this happens for each position
 	for(int i = 0; i < 3; i++) {
 		// checking winner row-wise
 		if(board[i][0] == board[i][1] && board[i][1] == board[i][2]) {// checking in row
@@ -112,7 +114,7 @@ compInp:
 			goto compInp;
 		board[posR][posC] = 'o';
 
-		turn = 0;
+		turn = 0; // set turn to player's turn
 	}
 
 	return turn;
