@@ -43,11 +43,13 @@ int main(void) {
 }
 
 void dfs(vertex*Vertex, int idx, int adjMat[][100], int numV) {
-	/* termination condition */
 
 	printf("%d\n", Vertex[idx].value);
+	Vertex[idx].state = 1; // visited state
 
 	for(int i = 0; i < numV; i++)
 		if(adjMat[idx][i] == 1 && Vertex[i].state == 0)
-			dfs(Vertex + i, 0, adjMat, numV);
+			dfs(Vertex, i, adjMat, numV);
+
+	Vertex[idx].state = 2; // finished state
 }
