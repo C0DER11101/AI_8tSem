@@ -1,35 +1,32 @@
+// tic-tac-toe
+
+
 #include<stdio.h>
 #include<stdlib.h>
 
-int evaluate(int(*)[3]);
-int minimax();
+typedef struct moves {
+	int xpos;
+	int ypos;
+	int score;
+}moves;
 
 int main(void) {
-	
-	int board[3][3];
-
-	for(int i = 0; i < 3; i++)
-		for(int j = 0; j < 3; j++)
-			board[i][j] = '_';
-	int scores[] = {-1, 0, 1};
-	/* -1 -> machine wins the game
-	   0  -> tie
-	   1  -> user wins the game
-	 */
-	
-	int xPos, yPos;
+	int pos;
+	int board[9];
+	for(int i = 0; i < 9; i++)
+		board[i] = '_';
 
 	while(1) {
+		printf("enter position for \'x\'(0-8): ");
+		scanf("%d", &pos);
 
-		printf("user: ");
-		scanf("%d%d", &xPos, &yPos);
-
-		if((xPos > 0 && xPos < 3) || (yPos > 0 && yPos < 3)) {
-			puts("Invalid coordinates!");
+		if(board[pos] != '_') {
+			puts("Occupied! Enter again");
 			continue;
 		}
 
-		board[xPos][yPos] = 'x';
+		minimax(board, true); // maximizing player
+
 	}
 
 	return 0;
