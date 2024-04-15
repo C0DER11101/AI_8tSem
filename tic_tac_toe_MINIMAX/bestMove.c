@@ -6,7 +6,14 @@
 #include "functions.h"
 #include "constants.h"
 
+extern Score score;
+
 void bestPos(int*board) {
+	// before determining the best position check if the game is over
+	int result = evaluate(board);
+	if(result != 101)
+		return;
+
 	int move;
 	int bestScore = -INF;
 	int score;

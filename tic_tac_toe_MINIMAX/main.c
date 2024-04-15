@@ -23,26 +23,6 @@ int main(void) {
 	showBoard(board);
 
 	while(1) {
-		printf("enter position for \'o\'(0-8): ");
-		scanf("%d", &pos);
-
-		if(pos > 8 || pos < 0) {
-			puts("Enter a valid position");
-			continue;
-		}
-
-		else if(board[pos] != '_') {
-			puts("Occupied! Enter again");
-			continue;
-		}
-
-		system("clear");
-		
-
-
-		board[pos] = human;
-
-
 		result = evaluate(board);
 
 		if(result != 101) {
@@ -61,6 +41,25 @@ int main(void) {
 				break;
 			}
 		}
+
+		printf("enter position for \'o\'(0-8): ");
+		scanf("%d", &pos);
+
+		if(pos > 8 || pos < 0) {
+			puts("Enter a valid position");
+			continue;
+		}
+
+		else if(board[pos] != '_') {
+			puts("Occupied! Enter again");
+			continue;
+		}
+
+		system("clear");
+		
+
+		board[pos] = human;
+
 
 		// determining the best position in the board
 		bestPos(board);
