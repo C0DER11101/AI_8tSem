@@ -12,6 +12,10 @@
 	1. If in each critical row the conclusion is also true, then the argument form is valid.
 	2. If there is at least one critical row in which the conclusion is false, the argument is invalid.
 
+## Important resource
+
+* [https://www.javatpoint.com/propositional-logic-in-artificial-intelligence](https://www.javatpoint.com/propositional-logic-in-artificial-intelligence).
+
 <p align = "center">
 &#9678; &#9678; &#9678;
 </p>
