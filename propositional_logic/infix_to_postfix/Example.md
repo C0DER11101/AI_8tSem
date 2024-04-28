@@ -41,15 +41,15 @@ $(A + (B * C - (D / E \uparrow F) * G) * H)$
 
 <tr>
 <td>$5$</td>
-<td>$ * $</td>
-<td>$(\ +\ (\ * $</td>
+<td>$*$</td>
+<td>$(\ +\ (\ *$</td>
 <td>$A\ B$</td>
 </tr>
 
 <tr>
 <td>$6$</td>
 <td>$C$</td>
-<td>$(\ +\ (\ * $</td>
+<td>$(\ +\ (\ *$</td>
 <td>$A\ B\ C$</td>
 </tr>
 
@@ -57,28 +57,28 @@ $(A + (B * C - (D / E \uparrow F) * G) * H)$
 <td>$7$</td>
 <td>$-$</td>
 <td>$(\ +\ (\ -$</td>
-<td>$A\ B\ C\ * $</td>
+<td>$A\ B\ C\ *$</td>
 </tr>
 
 <tr>
 <td>$8$</td>
 <td>$($</td>
 <td>$(\ +\ (\ -\ ($</td>
-<td>$A\ B\ C\ * $</td>
+<td>$A\ B\ C\ *$</td>
 </tr>
 
 <tr>
 <td>$9$</td>
 <td>$D$</td>
 <td>$(\ +\ (\ -\ ($</td>
-<td>$A\ B\ C\ * \ D$</td>
+<td>$A\ B\ C\ *\ D$</td>
 </tr>
 
 <tr>
 <td>$10$</td>
 <td>$/$</td>
 <td>$(\ +\ (\ -\ (\ /$</td>
-<td>$A\ B\ C\ * \ D$</td>
+<td>$A\ B\ C\ *\ D$</td>
 </tr>
 
 
@@ -86,70 +86,70 @@ $(A + (B * C - (D / E \uparrow F) * G) * H)$
 <td>$11$</td>
 <td>$E$</td>
 <td>$(\ +\ (\ -\ (\ /$</td>
-<td>$A\ B\ C\ * \ D\ E$</td>
+<td>$A\ B\ C\ *\ D\ E$</td>
 </tr>
 
 <tr>
 <td>$12$</td>
 <td>$\uparrow$</td>
 <td>$(\ +\ (\ -\ (\ /\ \uparrow$</td>
-<td>$A\ B\ C\ * \ D\ E$</td>
+<td>$A\ B\ C\ *\ D\ E$</td>
 </tr>
 
 <tr>
 <td>$13$</td>
 <td>$F$</td>
 <td>$(\ +\ (\ -\ (\ /\ \uparrow$</td>
-<td>$A\ B\ C\ * \ D\ E\ F$</td>
+<td>$A\ B\ C\ *\ D\ E\ F$</td>
 </tr>
 
 <tr>
 <td>$14$</td>
 <td>$)$</td>
 <td>$(\ +\ (\ -$</td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\$</td>
 </tr>
 
 <tr>
 <td>$15$</td>
-<td>$ * $</td>
-<td>$(\ +\ (\ -\ * $</td>
+<td>$*$</td>
+<td>$(\ +\ (\ -\ *$</td>
 <td></td>
 </tr>
 
 <tr>
 <td>$16$</td>
 <td>$G$</td>
-<td>$(\ +\ (\ -\ * $</td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\ G$</td>
+<td>$(\ +\ (\ -\ *$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ G$</td>
 </tr>
 
 <tr>
 <td>$17$</td>
 <td>$)$</td>
 <td>$(\ +$</td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\ G\ * \ -$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ G\ *\ -$</td>
 </tr>
 
 <tr>
 <td>$18$</td>
-<td>$ * $</td>
-<td>$(\ +\ * $</td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\ G\ * \ -$</td>
+<td>$*$</td>
+<td>$(\ +\ *$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ G\ *\ -$</td>
 </tr>
 
 <tr>
 <td>$19$</td>
 <td>$H$</td>
-<td>$(\ +\ * $</td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\ G\ * \ -\ H$</td>
+<td>$(\ +\ *$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ G\ *\ -\ H$</td>
 </tr>
 
 <tr>
 <td>$20$</td>
 <td>$)$</td>
 <td></td>
-<td>$A\ B\ C\ * \ D\ E\ F\ \uparrow\ /\ G\ * \ -\ H\ * \ +$</td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ G\ *\ -\ H\ *\ +$</td>
 </tr>
 
 </table>
