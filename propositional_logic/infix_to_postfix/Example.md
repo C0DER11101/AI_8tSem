@@ -114,7 +114,7 @@ $(A + (B * C - (D / E \uparrow F) * G) * H)$
 <td>$15$</td>
 <td>$*$</td>
 <td>$(\ +\ (\ -\ *$</td>
-<td></td>
+<td>$A\ B\ C\ *\ D\ E\ F\ \uparrow\ /\ $</td>
 </tr>
 
 <tr>
