@@ -4,15 +4,23 @@
 
 <table>
 <tr>
-<td><strong>Symbol Scanned</strong</td>
+<td colspan = "2"><strong>Symbol Scanned</strong</td>
 <td><strong>Stack</strong></td>
 <td><strong>Expression</strong></td>
 </tr>
 
 <tr>
+<td>$1$</td>
 <td>$A$</td>
 <td>$($</td>
 <td>$A$</td>
+</tr>
+
+<tr>
+<td>$2$</td>
+<td>$+$</td>
+<td>$(\ +$</td>
+<td>A</td>
 </tr>
 </table>
 
