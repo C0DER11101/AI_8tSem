@@ -8,6 +8,7 @@ int precedence(int);
 
 // stack functions
 void push(int);
+int peek();
 int pop();
 
 #endif
