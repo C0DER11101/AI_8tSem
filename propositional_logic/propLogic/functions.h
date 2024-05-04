@@ -3,7 +3,7 @@
 
 void intopost(string);
 int precedence(int);
-// void evaluate(string);
+void evaluate(string);
 
 
 // stack functions
