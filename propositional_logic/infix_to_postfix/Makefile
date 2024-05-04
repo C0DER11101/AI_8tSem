@@ -1,4 +1,4 @@
-files = main.o precedence.o push_pop.o intopost.o
+files = main.o precedence.o push_pop.o intopost.o evaluate.o
 
 run: $(files)
 	gcc $(files) -o run
@@ -14,6 +14,9 @@ push_pop.o:
 
 intopost.o: functions.h
 	gcc -c intopost.c
+
+evaluate.o: functions.h
+	gcc -c evaluate.c
 
 .PHONY: clean
 

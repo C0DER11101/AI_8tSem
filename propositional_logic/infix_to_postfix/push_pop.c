@@ -5,6 +5,8 @@ extern int*stack;
 
 void push(int symbol) {
 	stack[++top] = symbol;
+	printf("TOP: %d\n", top);
+	printf("TOP[%d]\n", stack[top]);
 }
 
 int pop() {

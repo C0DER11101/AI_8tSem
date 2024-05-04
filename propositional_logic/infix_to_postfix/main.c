@@ -44,6 +44,7 @@ int main(void) {
 	intopost(infix);
 
 	printf("Postfix expression: %s\n", postfix);
+	printf("Value of this expression is: %d\n", evaluate(postfix));
 
 	free(infix);
 
