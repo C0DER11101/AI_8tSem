@@ -18,6 +18,7 @@ void intopost(string infix) {
 		switch(infix[i]) {
 			case '(':
 				push(infix[i]);
+
 				break;
 
 			case '~':
@@ -26,6 +27,7 @@ void intopost(string infix) {
 				while(precCurrOp <= precedence(peek()))
 					postfix[idx++] = pop();
 				push(infix[i]);
+
 				break;
 
 			case '^':
@@ -34,6 +36,7 @@ void intopost(string infix) {
 				while(precCurrOp <= precedence(peek()))
 					postfix[idx++] = pop();
 				push(infix[i]);
+
 				break;
 
 			case 'v': case 'V':
@@ -42,6 +45,7 @@ void intopost(string infix) {
 				while(precCurrOp <= precedence(peek()))
 					postfix[idx++] = pop();
 				push(infix[i]);
+
 				break;
 
 			case '>':
@@ -50,6 +54,7 @@ void intopost(string infix) {
 				while(precCurrOp <= precedence(peek()))
 					postfix[idx++] = pop();
 				push(infix[i]);
+
 				break;
 
 			case '-':
@@ -58,6 +63,7 @@ void intopost(string infix) {
 				while(precCurrOp <= precedence(peek()))
 					postfix[idx++] = pop();
 				push(infix[i]);
+
 				break;
 			case ')':
 				popped = pop();
@@ -66,6 +72,8 @@ void intopost(string infix) {
 					postfix[idx++] = popped;
 					popped = pop();
 				}
+				
+				break;
 
 			default:
 				postfix[idx++] = infix[i];
@@ -75,7 +83,8 @@ void intopost(string infix) {
 	popped = pop();
 
 	while(popped != -1) {
-		postfix[idx++] = popped;
+		if(popped != '(' && popped != ')')
+			postfix[idx++] = popped;
 		popped = pop();
 	}
 }

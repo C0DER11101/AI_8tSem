@@ -8,6 +8,7 @@ typedef char* string;
 int top = -1;
 int*stack;
 string postfix;
+int(*bools)[3];
 
 int main(void) {
 	string expression;
