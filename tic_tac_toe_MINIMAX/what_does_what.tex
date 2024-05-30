@@ -1,0 +1,157 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\makeatletter
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{-3.25ex \@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}{\normalfont\normalsize\bfseries}}
+
+\makeatother
+
+\begin{document}
+	\section{evaluate(int*board)}
+	\paragraph{What it does}
+	
+	This function basically evaluates the current state of the game by checking if the game is a tie, or the ai won, or the the user won and based on that it returns a value. The value for a win is $1$, a tie is $0$ and a lose is $-1$.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\textwidth]{imags/img1.png}
+		\caption{Checking row-wise}
+		\label{fig:fig1}
+	\end{figure}
+
+Here, it's checking if three columns of any row have the same symbol. If this condition evaluates to true, then if checks if the symbol is that of the human or ai, if it's of \textbf{ai} then \textbf{score.win}, which is $1$, is returned otherwise \textbf{score.lose}, which is $-1$, is returned.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img2.png}
+	\caption{Checking column-wise}
+	\label{fig:fig2}
+\end{figure}
+
+Here, it's checking if three rows of any column have the same symbol. If this condition.....(I guess you know the rest).
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img3.png}
+	\caption{Checking the diagonal that connects the top-right corner to the bottom left corner(of the board)}
+	\label{fig:fig3}
+\end{figure}
+
+Caption is self-explanatory. The rest is just like the above two.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img4.png}
+	\caption{Checking the other diagonal}
+	\label{fig:fig4}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img5.png}
+	\caption{This snippet checks if the game is over or not}
+	\label{fig:fig5}
+\end{figure}
+
+If the game is over, then the board won't have any empty spaces. If the game is not over, then the board will have empty spaces. \textbf{And this snippet will be executed iff none of the above snippets are executed. It will return \textit{score.tie} which is $0$(meaning that the game is over because the board is out of empty spaces) otherwise will return $101$(again this could be any number other than $0$, $-1$ and $1$).}
+
+\newpage
+\section{bestPos(int*board)}
+\paragraph{What it does}
+
+This function works for the ai. It basically uses the \textbf{evaluate()} method to first check if the game whether the game is over(because there is no point in determining the best position if the game is over).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img6.png}
+	\caption{Checking if the game if over or not}
+	\label{fig:fig6}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img7.png}
+	\caption{Variables}
+	\label{fig:fig7}
+\end{figure}
+
+\textbf{You may/maynot include this part(these points) in the slide. your wish.}
+\begin{itemize}
+	\item \textbf{move} is the best move that the ai will make.
+	\item \textbf{bestScore} is the best score of a position(it's initially initialized to $-\infty$).
+	\item \textbf{score} is the score of the position where ai will place its symbol.
+\end{itemize}
+\newpage
+Coming to the actual code section:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.3\textwidth]{imags/img8.png}
+	\caption{bestPos's main section}
+	\label{fig:fig8}
+\end{figure}
+
+Here, bestPos(), runs a loop(for the whole board) and \textbf{temporarily} places \textbf{ai's} symbol on the board and performs \textbf{minimax} on the board by calling \textbf{minimax()} for the current state of the board. \textbf{minimax()} returns a certain score for this state of the board and it gets recorded into the \textbf{score} variable. Next, that \textbf{temporary} ai symbol is removed(notice \textbf{board[i] = '\_'}).\\ 
+After this, \textbf{score} is compared with \textbf{bestScore}. Since \textbf{score $\mathbf{>}$ bestScore} evaluates to true, so \textbf{score} gets recorded in \textbf{bestScore} and the position for which we got a new best score, which is \textbf{i}, also gets recorded into the \textbf{move} variable.
+
+And the above paragraph is repeated for the entire board, until we get a best score(which will not have any other score greater than it) and its corresponding position recorded in \textbf{move}.
+
+After the loop terminates, this recorded \textbf{move}, which is the best move because it has a corresponding \textbf{bestScore}, is the new position where ai should place its symbol.
+
+\newpage
+\section{minimax(int*board, int depth, bool isMax)}
+\paragraph{What it does}
+
+It starts with \textbf{minimax(board, 0, false)} because, we are the \textbf{Max} player and ai is the \textbf{Min} player(always trying to minimize our winning chances).
+
+\paragraph{Checking if the game if over}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img9.png}
+	\caption{Checking the state of the game}
+	\label{fig:fig9}
+\end{figure}
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.4\textwidth]{imags/img11.png}
+	\caption{Min's turn}
+	\label{fig:fig11}
+\end{figure}
+
+Since, we started off with \textbf{minimax(board, 0, false)} meaning it's \textbf{not Max's turn} that is it's \textbf{Min's} turn, let us see \textbf{Min's} turn.
+
+Again, the same thing that we did in \textbf{bestPos()}, here too we run a loop for the whole board, but here we \textbf{temporarily place} the \textbf{human's symbol}, because \textbf{minimax} is the sidekick of the ai and it will always try to minimize the chance of human triumph. Now, after termporarily placing human's symbol on the board, it calls \textbf{minimax(board, depth + 1, true)} meaning it's Max's(that is ai's) turn now.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.4\textwidth]{imags/img10.png}
+	\caption{Max's turn(\textbf{Note}: this code snippet comes before Min's snippet)}
+	\label{fig:fig10}
+\end{figure}
+
+Now, this snippet is exactly like that the snippet in \textbf{bestPos()}, here we again temporarily place ai's symbol on the board and then call the \textbf{minimax()} function as \textbf{minimax(board, depth+1, false)}.
+\newpage
+Again, this turn taking goes on until the snippet in this image evaluates to true(that is, this is the base case of this recursive function):
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{imags/img9.png}
+	\caption{Checking the state of the game}
+	\label{fig:fig12}
+\end{figure}
+
+The following image explains a how this function works for a game of tic-tac-toe which has just progressed mid-way.
+
+I am sharing it with this pdf.
+
+\vspace{5cm}
+In summary, this is what it actually looks like:
+
+
+Once, the human player places his/her symbol on the board, the ai plays the game with itself(as an ai first, and then as a human, that's why it places the symbols \textbf{temporarily} because they are removed once minimax is performed) and decides which move would be best to reduce the chances of winning for the human.
+
+\end{document}
