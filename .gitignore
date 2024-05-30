@@ -6,3 +6,6 @@
 *.cs
 *.java
 *.webl
+*.aux
+*.log
+*.gz
